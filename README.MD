@@ -31,3 +31,18 @@ The **Gym Management System** is a web-based solution aimed at automating the da
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/gym-management-system.git
+
+2. Navigate to the project directory:
+   cd gym-management-system
+
+3. Install the required dependencies:
+   npm install
+
+4. Set up the database (if using MongoDB, make sure MongoDB is running locally or 
+   configure a cloud instance).
+
+5. Run the application:
+   npm start
+
+6. Open your browser and visit:
+   http://localhost:3000
