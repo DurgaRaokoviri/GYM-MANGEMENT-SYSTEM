@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Management System - Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="module" src="js/firebase.js"></script> <!-- Firebase config and initialization -->
+    <script type="module" src="js/app.js"></script> <!-- Login function and redirection -->
+</head>
+<body>
+    <div class="container">
+        <h1>Gym Management System</h1>
+        <div id="login-switch">
+            <button id="memberLoginBtn" class="active" onclick="switchToMemberLogin()">Member Login</button>
+            <button id="adminLoginBtn" onclick="switchToAdminLogin()">Admin Login</button>
+        </div>
+        <div id="login-form">
+            <h2 id="loginHeader">Member Login</h2>
+            <form id="loginForm" onsubmit="return loginUser(event)">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+                <p id="loginMessage"></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let loginType = 'member';
+        function switchToMemberLogin() {
+            loginType = 'member';
+            document.getElementById('loginHeader').textContent = 'Member Login';
+            document.getElementById('memberLoginBtn').classList.add('active');
+            document.getElementById('adminLoginBtn').classList.remove('active');
+        }
+
+        function switchToAdminLogin() {
+            loginType = 'admin';
+            document.getElementById('loginHeader').textContent = 'Admin Login';
+            document.getElementById('adminLoginBtn').classList.add('active');
+            document.getElementById('memberLoginBtn').classList.remove('active');
+        }
+    </script>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCkKPMKs6NWS09GQays7-T3jafmgvPV7Nw",
+      authDomain: "gym-management-system-692b3.firebaseapp.com",
+      projectId: "gym-management-system-692b3",
+      storageBucket: "gym-management-system-692b3.appspot.com",
+      messagingSenderId: "781893804629",
+      appId: "1:781893804629:web:9d4e51800322787b25eadc",
+      measurementId: "G-8KXBJDL1B7"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</html>

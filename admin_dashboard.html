@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+
+    <div>
+        <h3>Add Member</h3>
+        <input type="text" id="memberName" placeholder="Member Name">
+        <input type="email" id="memberEmail" placeholder="Member Email">
+        <input type="text" id="feePackage" placeholder="Fee Package">
+        <button onclick="addMember()">Add Member</button>
+        <p id="adminMessage"></p>
+
+        <button onclick="exportMembersToCSV()">Export Members to CSV</button>
+    </div>
+</body>
+<script src="../js/app.js"></script>
+</html>
