@@ -4,7 +4,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebas
 
 // Your Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCkKPMKs6NWS09GQays7-T3jafmgvPV7Nw",
+    apiKey: "*******",
     authDomain: "gym-management-system-692b3.firebaseapp.com",
     projectId: "gym-management-system-692b3",
     storageBucket: "gym-management-system-692b3.appspot.com",
